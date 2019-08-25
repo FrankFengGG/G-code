@@ -32,7 +32,6 @@ kits.formatDate = function () {
 }
 
 
-
 kits.randomInt = function (n, m) {
   return Math.floor(Math.random() * (m - n + 1) + n);
 }
@@ -48,5 +47,21 @@ kits.getId = function () {
   // 把两个数字连起来
   let id = time + '' + r;
   return id;
+}
 
+// 2019-08-24
+// Add get a random color in Hexadecimal form
+kits.getRandHexColor=function(){
+  let red =(this.getRandInt(0,255)).toString(16);
+  let green=(this.getRandInt(0,255)).toString(16);
+  let blue=(this.getRandInt(0,255)).toString(16);
+  return'#sg'+red+green+blue;v 
+}
+
+// Add get a random color in RGB form
+kits.getRandRGBColor=function(){
+  let red=this.getRandInt(0,255);
+  let green=this.getRandInt(0,255);
+  let blue=this.getRandInt(0,255);
+  return 'rgb('+red+','+green+','+blue+')';
 }
